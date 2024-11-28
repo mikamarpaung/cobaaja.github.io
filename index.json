@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-28T15:27:01.688Z",
-    "end": "2024-11-28T15:27:08.900Z",
-    "duration": 7212,
+    "start": "2024-11-28T15:29:57.222Z",
+    "end": "2024-11-28T15:30:08.018Z",
+    "duration": 10796,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d40aef2b-5026-46f3-b839-698023bb4ead",
+      "uuid": "61a45f5f-b81e-4a7b-bfa6-6f2b2d58a61c",
       "title": "",
       "fullFile": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Jimy\\test.js",
       "file": "\\test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "541520fd-c8ae-4907-af9f-d85eb6071c30",
+          "uuid": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
           "title": "test",
           "fullFile": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Jimy\\test.js",
           "file": "\\test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"test\"",
               "fullTitle": "test \"before all\" hook in \"test\"",
               "timedOut": false,
-              "duration": 4651,
+              "duration": 8443,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await new Builder().forBrowser(Browser.CHROME).build()\nawait driver.manage().window().maximize();\nawait driver.get('https://intern1.cbn.net.id/login')",
               "err": {},
-              "uuid": "e98c157a-5242-4b2f-af85-2f040d0ba41c",
-              "parentUUID": "541520fd-c8ae-4907-af9f-d85eb6071c30",
+              "uuid": "cc780001-1470-46d7-b345-13e1410ff63f",
+              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after all\" hook in \"test\"",
               "fullTitle": "test \"after all\" hook in \"test\"",
               "timedOut": false,
-              "duration": 313,
+              "duration": 308,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.quit()",
               "err": {},
-              "uuid": "327ce0fd-19ce-4961-a177-f4db6fa805eb",
-              "parentUUID": "541520fd-c8ae-4907-af9f-d85eb6071c30",
+              "uuid": "25f57ff4-8344-49af-9860-19a744493c79",
+              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
               "isHook": true,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "\"after each\" hook in \"test\"",
               "fullTitle": "test \"after each\" hook in \"test\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "if(this.currentTest.state === 'failed') {\n  let imageFileName = this.currentTest.title + '.png'\n  driver.takeScreenshot().then(\n  function(image) {\n    require('fs').writeFileSync('./myReport/screenshots/' + imageFileName, image, 'base64');\n}\n)\naddContext(this, 'Following comes the Failed test Image')\naddContext(this, './screenshots/' + imageFileName);\n      };",
               "err": {},
-              "uuid": "259e0e47-9ac4-43ee-a94e-ad7c54ca51af",
-              "parentUUID": "541520fd-c8ae-4907-af9f-d85eb6071c30",
+              "uuid": "f862fe56-25c2-48a0-9753-796da4c37027",
+              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
               "isHook": true,
               "skipped": false
             }
@@ -94,7 +94,7 @@
               "title": "coba-coba",
               "fullTitle": "test coba-coba",
               "timedOut": false,
-              "duration": 2235,
+              "duration": 2032,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -107,8 +107,8 @@
                 "estack": "AssertionError: expected 'Contract View' to equal 'Contract miew'\n    at Context.<anonymous> (test.js:37:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Contract View\n+ Contract miew\n"
               },
-              "uuid": "570e2d6b-3706-44dd-bbf0-ee80d540ad80",
-              "parentUUID": "541520fd-c8ae-4907-af9f-d85eb6071c30",
+              "uuid": "7450bcee-f12a-4257-8dac-fd358f3ce91a",
+              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
               "isHook": false,
               "skipped": false
             }
@@ -116,11 +116,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "570e2d6b-3706-44dd-bbf0-ee80d540ad80"
+            "7450bcee-f12a-4257-8dac-fd358f3ce91a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 2235,
+          "duration": 2032,
           "root": false,
           "rootEmpty": false,
           "_timeout": 0
