@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "tests": 2,
+    "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-28T15:29:57.222Z",
-    "end": "2024-11-28T15:30:08.018Z",
-    "duration": 10796,
-    "testsRegistered": 1,
-    "passPercent": 0,
+    "start": "2024-11-28T15:44:42.004Z",
+    "end": "2024-11-28T15:44:47.244Z",
+    "duration": 5240,
+    "testsRegistered": 2,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "61a45f5f-b81e-4a7b-bfa6-6f2b2d58a61c",
+      "uuid": "02e28541-4260-43dc-8e0a-7e74a76b3a53",
       "title": "",
       "fullFile": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Jimy\\test.js",
       "file": "\\test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
+          "uuid": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
           "title": "test",
           "fullFile": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Jimy\\test.js",
           "file": "\\test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"test\"",
               "fullTitle": "test \"before all\" hook in \"test\"",
               "timedOut": false,
-              "duration": 8443,
+              "duration": 3003,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await new Builder().forBrowser(Browser.CHROME).build()\nawait driver.manage().window().maximize();\nawait driver.get('https://intern1.cbn.net.id/login')",
               "err": {},
-              "uuid": "cc780001-1470-46d7-b345-13e1410ff63f",
-              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
+              "uuid": "c1389903-3d6a-41fc-8c27-421c0f43611b",
+              "parentUUID": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after all\" hook in \"test\"",
               "fullTitle": "test \"after all\" hook in \"test\"",
               "timedOut": false,
-              "duration": 308,
+              "duration": 92,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.quit()",
               "err": {},
-              "uuid": "25f57ff4-8344-49af-9860-19a744493c79",
-              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
+              "uuid": "9d6cb110-cfc9-459a-aa0f-e93b249c3695",
+              "parentUUID": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
               "isHook": true,
               "skipped": false
             },
@@ -74,53 +74,73 @@
               "title": "\"after each\" hook in \"test\"",
               "fullTitle": "test \"after each\" hook in \"test\"",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": null,
               "speed": null,
               "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "if(this.currentTest.state === 'failed') {\n  let imageFileName = this.currentTest.title + '.png'\n  driver.takeScreenshot().then(\n  function(image) {\n    require('fs').writeFileSync('./myReport/screenshots/' + imageFileName, image, 'base64');\n}\n)\naddContext(this, 'Following comes the Failed test Image')\naddContext(this, './screenshots/' + imageFileName);\n      };",
+              "code": "if(this.currentTest.state === 'failed') {\n  let imageFileName = this.currentTest.title + '.png'\n  driver.takeScreenshot().then(\n  function(image) {\n    require('fs').writeFileSync('./myReport/evidenceFail/' + imageFileName, image, 'base64');\n}\n)\naddContext(this, 'Following comes the Failed test Image')\naddContext(this, './evidenceFail/' + imageFileName);\n      }else if(this.currentTest.state === 'passed') {\nif(this.currentTest.state === 'failed') {\n  let imageFileName = this.currentTest.title + '.png'\n  driver.takeScreenshot().then(\n  function(image) {\n    require('fs').writeFileSync('./myReport/evidencePass/' + imageFileName, image, 'base64');\n}\n)\naddContext(this, 'Following comes the Failed test Image')\naddContext(this, './evidencePass/' + imageFileName);\n}\n      };",
               "err": {},
-              "uuid": "f862fe56-25c2-48a0-9753-796da4c37027",
-              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
+              "uuid": "f0433dd5-bf7c-4a0c-97f8-e20227f9c183",
+              "parentUUID": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
               "isHook": true,
               "skipped": false
             }
           ],
           "tests": [
             {
-              "title": "coba-coba",
-              "fullTitle": "test coba-coba",
+              "title": "coba-coba hasil fail",
+              "fullTitle": "test coba-coba hasil fail",
               "timedOut": false,
-              "duration": 2032,
+              "duration": 1882,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"Following comes the Failed test Image\",\n  \"./screenshots/coba-coba.png\"\n]",
+              "context": "[\n  \"Following comes the Failed test Image\",\n  \"./evidenceFail/coba-coba hasil fail.png\"\n]",
               "code": "await driver.findElement(By.xpath('/html/body/section/div/div/div/form/div[1]/input')).sendKeys('david');\nawait driver.findElement(By.xpath('/html/body/section/div/div/div/form/div[2]/input')).sendKeys('password', Key.RETURN);\nconst namaHalaman = await driver.findElement(By.xpath('/html/body/div/header/div/h1')).getText();\nchai.expect(namaHalaman).to.equal('Contract miew');",
               "err": {
                 "message": "AssertionError: expected 'Contract View' to equal 'Contract miew'",
-                "estack": "AssertionError: expected 'Contract View' to equal 'Contract miew'\n    at Context.<anonymous> (test.js:37:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "estack": "AssertionError: expected 'Contract View' to equal 'Contract miew'\n    at Context.<anonymous> (test.js:48:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Contract View\n+ Contract miew\n"
               },
-              "uuid": "7450bcee-f12a-4257-8dac-fd358f3ce91a",
-              "parentUUID": "1f7b339a-b807-4ef6-bb51-4e34d013cbe2",
+              "uuid": "e86ef82f-a3c3-4bde-af3a-bb30def970d8",
+              "parentUUID": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "coba-coba hasil pass",
+              "fullTitle": "test coba-coba hasil pass",
+              "timedOut": false,
+              "duration": 246,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// await driver.findElement(By.xpath('/html/body/section/div/div/div/form/div[1]/input')).sendKeys('david');\n// await driver.findElement(By.xpath('/html/body/section/div/div/div/form/div[2]/input')).sendKeys('password', Key.RETURN);\n  \nconst namaHalaman = await driver.findElement(By.xpath('/html/body/div/header/div/h1')).getText();\nchai.expect(namaHalaman).to.equal('Contract View');",
+              "err": {},
+              "uuid": "d058620d-82c2-4758-9cdd-5d9796158dcc",
+              "parentUUID": "b15e94b1-51d3-4170-83e3-2e1bd187900c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "d058620d-82c2-4758-9cdd-5d9796158dcc"
+          ],
           "failures": [
-            "7450bcee-f12a-4257-8dac-fd358f3ce91a"
+            "e86ef82f-a3c3-4bde-af3a-bb30def970d8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 2032,
+          "duration": 2128,
           "root": false,
           "rootEmpty": false,
           "_timeout": 0
